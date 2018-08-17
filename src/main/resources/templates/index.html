@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Validator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+<div class="square">
 <form action="/index" method="post">
     <p>Enter text to check if number</p>
     <input type="text" name="string"/>
-    <input type="submit" value="Validate!"/>
-
+    <input id="button" type="submit" value="Validate!"/>
 </form>
 <p th:text="${isNumber}"></p>
+</div>
+
+
 </body>
 </html>
