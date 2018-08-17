@@ -38,5 +38,15 @@
 <p th:text="${isPalindrome}"></p>
 </div>
 
+<div class ="square">
+    <form action="/socialsecurity-validator" method="post">
+        <p>Enter text to check if it is a valid social security number</p>
+        <input type="text" name="socialsecurityString"/>
+        <input class="button" type="submit" value="Validate!"/>
+
+    </form>
+    <p th:text="${isSocialsecurity}"></p>
+</div>
+
 </body>
 </html>

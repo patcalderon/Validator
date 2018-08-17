@@ -35,4 +35,9 @@ public class DemoController {
     public ModelAndView palindromForm(@RequestParam String palindromeString) {
         return new ModelAndView("index").addObject("isPalindrome", validator.isPalindrome(palindromeString));
     }
+
+    @PostMapping("/socialsecurity-validator")
+    public ModelAndView socialsecurityForm(@RequestParam String socialsecurityString) {
+        return new ModelAndView("index").addObject("isSocialsecurity", validator.isSocialsecurity(socialsecurityString));
+    }
 }
