@@ -17,6 +17,10 @@ public class Validator {
     }
 
     public boolean areRectanglesEqual(String email) {
-        return EmailValidator.getInstance().isValid(email);
+        return false;
+    }
+
+    public boolean isPalindrome(String s) {
+        return (new StringBuilder(s).reverse().toString().equals(s));
     }
 }

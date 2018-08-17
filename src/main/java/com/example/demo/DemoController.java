@@ -30,4 +30,9 @@ public class DemoController {
     public ModelAndView emailForm(@RequestParam String emailString) {
         return new ModelAndView("index").addObject("isEmail", validator.isEmail(emailString));
     }
+
+    @PostMapping("/palindrome-validator")
+    public ModelAndView palindromForm(@RequestParam String palindromeString) {
+        return new ModelAndView("index").addObject("isPalindrome", validator.isPalindrome(palindromeString));
+    }
 }
