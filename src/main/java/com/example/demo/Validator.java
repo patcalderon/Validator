@@ -19,4 +19,8 @@ public class Validator {
     public boolean isPalindrome(String s) {
         return (new StringBuilder(s).reverse().toString().equals(s));
     }
+
+    public boolean isSocialsecurity(String s) {
+        return s.matches("\\d{6}-\\d{4}");
+    }
 }
