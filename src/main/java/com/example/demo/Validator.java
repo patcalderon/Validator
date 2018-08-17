@@ -15,4 +15,8 @@ public class Validator {
     public boolean isEmail(String email) {
         return EmailValidator.getInstance().isValid(email);
     }
+
+    public boolean isPalindrome(String s) {
+        return (new StringBuilder(s).reverse().toString().equals(s));
+    }
 }

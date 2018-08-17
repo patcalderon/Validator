@@ -29,5 +29,13 @@
 </div>
 
 
+<form action="/palindrome-validator" method="post">
+    <p>Enter text to check if it is a palindrome</p>
+    <input type="text" name="palindromeString"/>
+    <input type="submit" value="Validate!"/>
+
+</form>
+<p th:text="${isPalindrome}"></p>
+
 </body>
 </html>
