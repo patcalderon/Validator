@@ -16,7 +16,7 @@ public class Validator {
         return EmailValidator.getInstance().isValid(email);
     }
 
-    public boolean isRectanglesEqual(String email) {
+    public boolean areRectanglesEqual(String email) {
         return EmailValidator.getInstance().isValid(email);
     }
 }
