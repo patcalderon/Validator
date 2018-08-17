@@ -12,5 +12,14 @@
 
 </form>
 <p th:text="${isNumber}"></p>
+
+<form action="/email-validator" method="post">
+    <p>Enter text to check if it is an e-mail</p>
+    <input type="text" name="emailString"/>
+    <input type="submit" value="Validate!"/>
+
+</form>
+<p th:text="${isEmail}"></p>
+
 </body>
 </html>

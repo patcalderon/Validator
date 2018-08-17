@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +12,9 @@ import javax.validation.Valid;
 
 @Controller
 public class DemoController {
+      private Validator validator = new Validator();
+//    @Autowired
+//    private Validator validator;
 
     @GetMapping("/")
     public ModelAndView validator() {
@@ -18,7 +22,12 @@ public class DemoController {
     }
 
     @PostMapping("/index")
-    public ModelAndView form(@RequestParam String string){
-         return new ModelAndView().addObject("isNumber", Validator.isNumber(string));
-     }
+    public ModelAndView form(@RequestParam String string) {
+        return new ModelAndView("index").addObject("isNumber", validator.isNumber(string));
+    }
+
+    @PostMapping("/email-validator")
+    public ModelAndView emailForm(@RequestParam String emailString) {
+        return new ModelAndView("index").addObject("isEmail", validator.isEmail(emailString));
+    }
 }
