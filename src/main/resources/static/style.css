@@ -1,12 +1,13 @@
 .square{
     width: 250px;
-    height: 100px;
+    height: 150px;
     border: black 1px solid;
     box-shadow: 2.5px 5px lightgray;
     padding: 10px;
+    margin: 10px;
 }
 
-#button:hover{
+.button:hover{
     background-color: palegreen;
     cursor: pointer;
 }

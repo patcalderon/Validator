@@ -30,4 +30,9 @@ public class DemoController {
     public ModelAndView emailForm(@RequestParam String emailString) {
         return new ModelAndView("index").addObject("isEmail", validator.isEmail(emailString));
     }
+
+    @PostMapping("/prime-number")
+    public ModelAndView primeNumberForm(@RequestParam int number){
+        return new ModelAndView("index").addObject("isPrimeNumber", validator.isPrimeNumber(number));
+    }
 }

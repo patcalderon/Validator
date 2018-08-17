@@ -11,7 +11,7 @@
 <form action="/index" method="post">
     <p>Enter text to check if number</p>
     <input type="text" name="string"/>
-    <input id="button" type="submit" value="Validate!"/>
+    <input class="button" type="submit" value="Validate!"/>
 </form>
 <p th:text="${isNumber}"></p>
 
@@ -22,10 +22,20 @@
 <form action="/email-validator" method="post">
     <p>Enter text to check if it is an e-mail</p>
     <input type="text" name="emailString"/>
-    <input type="submit" value="Validate!"/>
+    <input class="button" type="submit" value="Validate!"/>
 
 </form>
 <p th:text="${isEmail}"></p>
+</div>
+
+<div class="square">
+    <form action="/prime-number" method="post">
+        <p>Enter number to check if it is a prime number</p>
+        <input type="text" name="number"/>
+        <input class="button" type="submit" value="Validate!"/>
+
+    </form>
+    <p th:text="${isPrimeNumber}"></p>
 </div>
 
 
